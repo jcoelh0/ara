@@ -1,0 +1,71 @@
+Sep 25 22:34:56.394 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Sep 25 22:34:56.394 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 58601.
+Sep 25 22:34:56.397 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 22:34:56.397 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips 
+Sep 25 22:34:56.397 GENERAL: working_dir=/home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips
+Sep 25 22:34:56.397 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips/b42ccceb-7eb0-40df-b86b-52f74e6e294d 
+Sep 25 22:34:56.397 GENERAL: working_dir=/home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips/b42ccceb-7eb0-40df-b86b-52f74e6e294d
+Sep 25 22:34:56.397 HYPERVISOR: exec_cmd: vm create Router2 2 c7200 
+Sep 25 22:34:56.397 VM: VM Router2 created.
+Sep 25 22:34:56.398 HYPERVISOR: exec_cmd: vm set_con_tcp_port Router2 5001 
+Sep 25 22:34:56.398 HYPERVISOR: exec_cmd: c7200 get_mac_addr Router2 
+Sep 25 22:34:56.398 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:56.398 HYPERVISOR: exec_cmd: vm slot_add_binding Router2 0 0 C7200-IO-FE 
+Sep 25 22:34:56.399 HYPERVISOR: exec_cmd: vm set_disk0 Router2 0 
+Sep 25 22:34:56.399 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:56.399 HYPERVISOR: exec_cmd: vm set_idle_pc Router2 0x62cbf334 
+Sep 25 22:34:56.399 HYPERVISOR: exec_cmd: vm set_ios Router2 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: c7200 set_mac_addr Router2 ca02.451d.0000 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm set_nvram Router2 512 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm set_ram Router2 512 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm slot_remove_binding Router2 0 0 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:56.400 HYPERVISOR: exec_cmd: vm slot_add_binding Router2 0 0 C7200-IO-2FE 
+Sep 25 22:34:57.170 HYPERVISOR: exec_cmd: nio create_udp udp-200f086d-eabf-4c86-926a-541f37369f7a 10018 127.0.0.1 10019 
+Sep 25 22:34:57.385 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router2 0 0 udp-200f086d-eabf-4c86-926a-541f37369f7a 
+Sep 25 22:34:57.386 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:57.416 HYPERVISOR: exec_cmd: nio create_udp udp-a0a57588-74e5-4276-95e6-2425cdbf1283 10022 127.0.0.1 10023 
+Sep 25 22:34:57.417 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router2 0 1 udp-a0a57588-74e5-4276-95e6-2425cdbf1283 
+Sep 25 22:34:57.417 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:34:59.779 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Sep 25 22:34:59.779 VM: VM Ghost created.
+Sep 25 22:34:59.780 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Sep 25 22:34:59.781 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Sep 25 22:34:59.782 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Sep 25 22:34:59.782 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Sep 25 22:34:59.783 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Sep 25 22:34:59.783 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Sep 25 22:34:59.789 HYPERVISOR: exec_cmd: vm start Ghost 
+Sep 25 22:35:00.086 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Sep 25 22:35:00.087 HYPERVISOR: exec_cmd: vm stop Ghost 
+Sep 25 22:35:00.253 VM: VM Ghost shutdown.
+Sep 25 22:35:00.253 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Sep 25 22:35:00.254 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Sep 25 22:35:00.254 VM: VM Ghost destroyed.
+Sep 25 22:35:00.255 HYPERVISOR: exec_cmd: vm set_ghost_status Router2 2 
+Sep 25 22:35:00.255 HYPERVISOR: exec_cmd: vm set_ghost_file Router2 /home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Sep 25 22:35:00.255 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:35:00.256 HYPERVISOR: exec_cmd: vm set_config Router2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Sep 25 22:35:00.256 HYPERVISOR: exec_cmd: vm start Router2 
+Sep 25 22:35:30.499 HYPERVISOR: exec_cmd: vm extract_config Router2 
+Sep 25 22:37:30.108 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:37:30.111 HYPERVISOR: exec_cmd: vm stop Router2 
+Sep 25 22:37:30.217 VM: VM Router2 shutdown.
+Sep 25 22:37:30.217 HYPERVISOR: exec_cmd: vm extract_config Router2 
+Sep 25 22:37:32.065 HYPERVISOR: exec_cmd: vm set_ghost_status Router2 2 
+Sep 25 22:37:32.066 HYPERVISOR: exec_cmd: vm set_ghost_file Router2 /home/joao/Desktop/ARA/Aula01/3rd/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Sep 25 22:37:32.067 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:37:32.068 HYPERVISOR: exec_cmd: vm set_config Router2 configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Sep 25 22:37:32.068 HYPERVISOR: exec_cmd: vm start Router2 
+Sep 25 22:37:43.328 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:37:43.330 HYPERVISOR: exec_cmd: vm stop Router2 
+Sep 25 22:37:43.440 VM: VM Router2 shutdown.
+Sep 25 22:37:43.440 HYPERVISOR: exec_cmd: vm extract_config Router2 
+Sep 25 22:37:43.915 HYPERVISOR: exec_cmd: vm get_status Router2 
+Sep 25 22:37:43.916 HYPERVISOR: exec_cmd: vm extract_config Router2 
+Sep 25 22:37:43.917 HYPERVISOR: exec_cmd: vm delete Router2 
+Sep 25 22:37:43.917 VM: VM Router2 destroyed.
+Sep 25 22:37:43.917 HYPERVISOR: exec_cmd: hypervisor stop 
+Sep 25 22:37:44.030 HYPERVISOR: Stopped.
+Sep 25 22:37:44.030 GENERAL: reset done.

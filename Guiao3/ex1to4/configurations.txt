@@ -1,0 +1,141 @@
+MPLS tem q ser configurado em cada int e no router no geral
+int 
+
+define interface-range macro1 ethernet 1/2 - 5
+
+
+
+
+Ex1)
+RouterA
+
+conf t
+int f0/0
+ip address 192.3.1.10 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f0/1
+ip address 192.3.2.10 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f1/0
+ip address 200.10.1.10 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f1/1
+ip address 200.10.2.10 255.255.255.0
+ip ospf 1 area 0
+no shut
+int Lo0
+ip address 192.2.0.10 255.255.255.255
+ip ospf 1 area 0
+no shut
+end
+wr
+
+RouterB
+
+conf t
+int f0/0
+ip address 192.1.1.11 255.255.255.128
+ip ospf 1 area 0
+no shut
+int f0/1
+ip address 192.1.1.128 255.255.255.128
+ip ospf 1 area 0
+no shut
+int f1/0
+ip address 200.1.11.11 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f1/1
+ip address 200.2.11.11 255.255.255.0
+ip ospf 1 area 0
+no shut
+int Lo0
+ip address 192.2.0.11 255.255.255.255
+ip ospf 1 area 0
+no shut
+end
+wr
+
+Router1
+
+conf t
+int f0/0
+ip address 200.10.1.1 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f0/1
+ip address 200.1.2.1 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f1/0
+ip address 200.1.11.1 255.255.255.0
+ip ospf 1 area 0
+no shut
+int Lo0
+ip address 192.2.0.1 255.255.255.255
+ip ospf 1 area 0
+no shut
+end
+wr
+
+Router2
+
+conf t
+int f0/0
+ip address 200.10.2.2 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f0/1
+ip address 200.1.2.2 255.255.255.0
+ip ospf 1 area 0
+no shut
+int f1/0
+ip address 200.2.11.2 255.255.255.0
+ip ospf 1 area 0
+no shut
+int Lo0
+ip address 192.2.0.2 255.255.255.255
+ip ospf 1 area 0
+no shut
+end
+wr
+
+
+
+ex2)
+
+
+RouterA e B
+
+conf t
+ip cef
+mpls ip
+int range f0/0-1, f1/0-1, Lo0
+mpls ip
+ip ospf 1 area 0
+
+Router1 e 2
+
+conf t
+ip cef
+mpls ip
+int range f0/0-1, f1/0, Lo0
+mpls ip
+ip ospf 1 area 0
+
+
+
+
+
+
+
+
+
+
+
+
+ex 4
+router a e b meter wireshark nos 4 links de dentro

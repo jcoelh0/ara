@@ -1,0 +1,52 @@
+Jan 03 12:32:29.406 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 03 12:32:29.409 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63542.
+Jan 03 12:32:29.582 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 03 12:32:29.610 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips 
+Jan 03 12:32:29.611 GENERAL: working_dir=C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips
+Jan 03 12:32:29.637 HYPERVISOR: exec_cmd: vm create Oeiras 6 c7200 
+Jan 03 12:32:29.640 VM: VM Oeiras created.
+Jan 03 12:32:29.665 HYPERVISOR: exec_cmd: vm set_con_tcp_port Oeiras 5005 
+Jan 03 12:32:29.692 HYPERVISOR: exec_cmd: c7200 get_mac_addr Oeiras 
+Jan 03 12:32:29.718 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:29.746 HYPERVISOR: exec_cmd: vm slot_add_binding Oeiras 0 0 C7200-IO-FE 
+Jan 03 12:32:29.771 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:29.800 HYPERVISOR: exec_cmd: vm set_idle_pc Oeiras 0x61d99154 
+Jan 03 12:32:29.825 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:29.852 HYPERVISOR: exec_cmd: vm slot_remove_binding Oeiras 0 0 
+Jan 03 12:32:29.878 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:29.905 HYPERVISOR: exec_cmd: vm slot_add_binding Oeiras 0 0 C7200-IO-2FE 
+Jan 03 12:32:29.931 HYPERVISOR: exec_cmd: vm set_ram Oeiras 512 
+Jan 03 12:32:29.958 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:29.986 HYPERVISOR: exec_cmd: vm slot_add_binding Oeiras 1 0 PA-2FE-TX 
+Jan 03 12:32:30.026 HYPERVISOR: exec_cmd: vm set_nvram Oeiras 512 
+Jan 03 12:32:30.070 HYPERVISOR: exec_cmd: vm set_disk0 Oeiras 0 
+Jan 03 12:32:30.102 HYPERVISOR: exec_cmd: c7200 set_mac_addr Oeiras ca06.2ef4.0000 
+Jan 03 12:32:30.124 HYPERVISOR: exec_cmd: vm set_exec_area Oeiras 64 
+Jan 03 12:32:30.152 HYPERVISOR: exec_cmd: vm set_ios Oeiras C:/Users/Asus/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 03 12:32:30.176 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:30.203 HYPERVISOR: exec_cmd: vm slot_add_binding Oeiras 2 0 PA-2FE-TX 
+Jan 03 12:32:30.227 HYPERVISOR: exec_cmd: vm set_config Oeiras configs/i6_startup-config.cfg 
+Jan 03 12:32:33.162 HYPERVISOR: exec_cmd: nio create_udp udp-271efe6b-b8aa-438b-ac17-0e2a02cb9017 10015 127.0.0.1 10014 
+Jan 03 12:32:33.198 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Oeiras 0 0 udp-271efe6b-b8aa-438b-ac17-0e2a02cb9017 
+Jan 03 12:32:33.231 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:33.270 HYPERVISOR: exec_cmd: nio create_udp udp-4dfe76db-3559-4e57-b60f-c3c5e8bbc352 10016 127.0.0.1 10017 
+Jan 03 12:32:33.299 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Oeiras 0 1 udp-4dfe76db-3559-4e57-b60f-c3c5e8bbc352 
+Jan 03 12:32:33.332 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:32:33.385 HYPERVISOR: exec_cmd: nio create_udp udp-0b361a2b-3a37-4a43-8f72-e1f3814a4b5a 10018 127.0.0.1 10019 
+Jan 03 12:32:33.418 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Oeiras 1 0 udp-0b361a2b-3a37-4a43-8f72-e1f3814a4b5a 
+Jan 03 12:32:33.458 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:44:58.758 HYPERVISOR: exec_cmd: vm set_ghost_status Oeiras 2 
+Jan 03 12:44:58.767 HYPERVISOR: exec_cmd: vm set_ghost_file Oeiras c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 03 12:44:58.771 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:44:58.781 HYPERVISOR: exec_cmd: vm start Oeiras 
+Jan 03 12:59:22.204 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 12:59:22.300 HYPERVISOR: exec_cmd: vm stop Oeiras 
+Jan 03 12:59:22.624 VM: VM Oeiras shutdown.
+Jan 03 12:59:22.632 HYPERVISOR: exec_cmd: vm extract_config Oeiras 
+Jan 03 13:15:14.840 HYPERVISOR: exec_cmd: vm get_status Oeiras 
+Jan 03 13:15:14.932 HYPERVISOR: exec_cmd: vm extract_config Oeiras 
+Jan 03 13:15:15.230 HYPERVISOR: exec_cmd: vm delete Oeiras 
+Jan 03 13:15:15.230 VM: VM Oeiras destroyed.
+Jan 03 13:15:15.371 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 03 13:15:15.665 HYPERVISOR: Stopped.
+Jan 03 13:15:15.665 GENERAL: reset done.

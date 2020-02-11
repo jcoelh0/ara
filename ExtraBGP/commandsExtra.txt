@@ -1,0 +1,89 @@
+Guiao 
+Extra - BGP and MP-BGP (Guide - part 1B)
+
+Router4
+
+int f0/0
+ip address 200.2.2.4 255.255.255.0
+no shut
+ipv6 address 2001:A:2::4/64
+no shut
+end
+wr
+
+
+
+ Router2
+conf t
+int f1/1
+ip address 200.2.2.2 255.255.255.0
+ipv6 address 2001:A:2::2/64
+no shut
+interface FastEthernet 0/1
+ip address 192.168.1.2 255.255.255.0 secondary
+router ospf 1
+network 192.168.1.0 0.0.0.255 area 0
+
+router bgp 2
+address-family ipv4 unicast
+neighbor 200.2.2.4 remote-as 3
+address-family ipv6 unicast
+neighbor 2001:A:2::4 remote-as 3
+
+ Router4
+router bgp 3
+address-family ipv4 unicast
+neighbor 200.2.2.2 remote-as 2
+address-family ipv6 unicast
+neighbor 2001:A:2::2 remote-as 2
+
+
+ex 2)
+
+ Router4
+router bgp 3
+address-family ipv4 unicast
+neighbor 200.2.2.2 default-originate
+address-family ipv6 unicast
+neighbor 2001:A:2::2 default-originate
+
+
+ex 3.1)
+
+ Router2
+ip access-list standard fOut-priv-default
+10 deny 10.0.0.0 0.255.255.255 !private route
+12 deny 172.16.0.0 0.15.255.255 !private route
+14 deny 192.168.0.0 0.0.255.255 !private route
+16 deny 0.0.0.0 0.0.0.0 !default route
+100 permit any !to permit all others
+
+router bgp 2
+address-family ipv4 unicast
+neighbor 200.1.1.1 distribute-list fOut-priv-default out
+neighbor 200.2.2.4 distribute-list fOut-priv-default out
+
+ex 3.2)
+
+ Router2
+ip access-list standard fIn-default
+16 deny 0.0.0.0 0.0.0.0 !default route
+100 permit any !to permit all others
+
+router bgp 2
+address-family ipv4 unicast
+neighbor 200.2.2.4 distribute-list fIn-default in
+
+ex 4)
+
+ Router2(config)#router bgp 2
+ Router2(config-router)# address-family ipv4 unicast
+ Router2(config-router-af)# no neighbor 200.1.1.1 distribute-list fOut-priv-default out
+ Router2(config-router-af)# no neighbor 200.2.2.4 distribute-list fOut-priv-default out
+ Router2(config-router-af)# no neighbor 200.2.2.4 distribute-list fIn-default in
+
+
+
+
+
+

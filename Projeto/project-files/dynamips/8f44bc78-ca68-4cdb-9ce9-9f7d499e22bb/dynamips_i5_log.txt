@@ -1,0 +1,52 @@
+Jan 03 12:32:28.252 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 03 12:32:28.254 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63529.
+Jan 03 12:32:28.462 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 03 12:32:28.472 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips 
+Jan 03 12:32:28.759 GENERAL: working_dir=C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips
+Jan 03 12:32:28.779 HYPERVISOR: exec_cmd: vm create Sintra 3 c7200 
+Jan 03 12:32:28.782 VM: VM Sintra created.
+Jan 03 12:32:28.805 HYPERVISOR: exec_cmd: vm set_con_tcp_port Sintra 5002 
+Jan 03 12:32:28.826 HYPERVISOR: exec_cmd: c7200 get_mac_addr Sintra 
+Jan 03 12:32:28.847 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:28.868 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-FE 
+Jan 03 12:32:28.891 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:28.912 HYPERVISOR: exec_cmd: vm set_idle_pc Sintra 0x61d99154 
+Jan 03 12:32:28.934 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:28.955 HYPERVISOR: exec_cmd: vm slot_remove_binding Sintra 0 0 
+Jan 03 12:32:28.977 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:28.997 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 0 0 C7200-IO-2FE 
+Jan 03 12:32:29.018 HYPERVISOR: exec_cmd: vm set_ram Sintra 512 
+Jan 03 12:32:29.039 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:29.060 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 1 0 PA-2FE-TX 
+Jan 03 12:32:29.080 HYPERVISOR: exec_cmd: vm set_nvram Sintra 512 
+Jan 03 12:32:29.102 HYPERVISOR: exec_cmd: vm set_disk0 Sintra 0 
+Jan 03 12:32:29.124 HYPERVISOR: exec_cmd: c7200 set_mac_addr Sintra ca03.2d5c.0000 
+Jan 03 12:32:29.146 HYPERVISOR: exec_cmd: vm set_exec_area Sintra 64 
+Jan 03 12:32:29.168 HYPERVISOR: exec_cmd: vm set_ios Sintra C:/Users/Asus/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 03 12:32:29.191 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:29.216 HYPERVISOR: exec_cmd: vm slot_add_binding Sintra 2 0 PA-2FE-TX 
+Jan 03 12:32:29.244 HYPERVISOR: exec_cmd: vm set_config Sintra configs/i3_startup-config.cfg 
+Jan 03 12:32:32.583 HYPERVISOR: exec_cmd: nio create_udp udp-677f3d90-bae6-43bc-b751-1f24545a663c 10004 127.0.0.1 10005 
+Jan 03 12:32:32.610 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 1 udp-677f3d90-bae6-43bc-b751-1f24545a663c 
+Jan 03 12:32:32.639 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:32.851 HYPERVISOR: exec_cmd: nio create_udp udp-48b5d07d-a461-462b-8128-2a2b6231d6ae 10009 127.0.0.1 10008 
+Jan 03 12:32:32.872 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 0 0 udp-48b5d07d-a461-462b-8128-2a2b6231d6ae 
+Jan 03 12:32:32.910 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:32:33.985 HYPERVISOR: exec_cmd: nio create_udp udp-e416e7fe-8db5-4dc4-82ea-e7c5ee12c272 10038 127.0.0.1 10039 
+Jan 03 12:32:34.015 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Sintra 1 0 udp-e416e7fe-8db5-4dc4-82ea-e7c5ee12c272 
+Jan 03 12:32:34.052 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:42:17.342 HYPERVISOR: exec_cmd: vm set_ghost_status Sintra 2 
+Jan 03 12:42:17.353 HYPERVISOR: exec_cmd: vm set_ghost_file Sintra c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 03 12:42:17.362 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:42:17.372 HYPERVISOR: exec_cmd: vm start Sintra 
+Jan 03 12:59:21.934 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 12:59:22.095 HYPERVISOR: exec_cmd: vm stop Sintra 
+Jan 03 12:59:22.496 VM: VM Sintra shutdown.
+Jan 03 12:59:22.502 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Jan 03 13:15:14.886 HYPERVISOR: exec_cmd: vm get_status Sintra 
+Jan 03 13:15:14.990 HYPERVISOR: exec_cmd: vm extract_config Sintra 
+Jan 03 13:15:15.145 HYPERVISOR: exec_cmd: vm delete Sintra 
+Jan 03 13:15:15.146 VM: VM Sintra destroyed.
+Jan 03 13:15:15.327 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 03 13:15:15.566 HYPERVISOR: Stopped.
+Jan 03 13:15:15.566 GENERAL: reset done.

@@ -1,0 +1,21 @@
+Nov 14 16:39:16.736 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Nov 14 16:39:16.736 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 44715.
+Nov 14 16:39:16.746 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 14 16:39:16.746 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte1/project-files/dynamips 
+Nov 14 16:39:16.746 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte1/project-files/dynamips
+Nov 14 16:39:16.747 HYPERVISOR: exec_cmd: ethsw create Ethernetswitch-2 
+Nov 14 16:39:17.209 HYPERVISOR: exec_cmd: nio create_udp udp-1be76911-3c56-470a-9d51-c58f8fc44c79 10001 127.0.0.1 10000 
+Nov 14 16:39:17.209 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-2 udp-1be76911-3c56-470a-9d51-c58f8fc44c79 
+Nov 14 16:39:17.218 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-2 udp-1be76911-3c56-470a-9d51-c58f8fc44c79 1 
+Nov 14 16:39:17.561 HYPERVISOR: exec_cmd: nio create_udp udp-f61852bf-cbb2-4600-849a-c343ec0e5873 10013 127.0.0.1 10012 
+Nov 14 16:39:17.562 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-2 udp-f61852bf-cbb2-4600-849a-c343ec0e5873 
+Nov 14 16:39:17.580 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-2 udp-f61852bf-cbb2-4600-849a-c343ec0e5873 1 
+Nov 14 16:39:47.141 HYPERVISOR: exec_cmd: ethsw remove_nio Ethernetswitch-2 udp-1be76911-3c56-470a-9d51-c58f8fc44c79 
+Nov 14 16:39:47.158 HYPERVISOR: exec_cmd: nio delete udp-1be76911-3c56-470a-9d51-c58f8fc44c79 
+Nov 14 16:40:05.171 HYPERVISOR: exec_cmd: nio create_udp udp-ae537d57-66bb-47a7-99ee-027a50dbf40a 10000 127.0.0.1 10001 
+Nov 14 16:40:05.172 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-2 udp-ae537d57-66bb-47a7-99ee-027a50dbf40a 
+Nov 14 16:40:05.179 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-2 udp-ae537d57-66bb-47a7-99ee-027a50dbf40a 1 
+Nov 14 17:59:26.698 HYPERVISOR: exec_cmd: ethsw delete Ethernetswitch-2 
+Nov 14 17:59:26.721 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 14 17:59:27.178 HYPERVISOR: Stopped.
+Nov 14 17:59:27.178 GENERAL: reset done.

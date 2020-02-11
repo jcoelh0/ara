@@ -1,0 +1,308 @@
+MPLS tem q ser configurado em cada int e no router no geral
+int 
+
+define interface-range macro1 ethernet 1/2 - 5
+
+
+Ex5)
+
+RouterA e B
+
+conf t
+int range f0/0-1, f1/0-1, Lo0
+no mpls ip
+
+Router1 e 2
+
+conf t
+int range f0/0-1, f1/0, Lo0
+no mpls ip
+end 
+wr
+
+wireshark
+
+RouterA e B
+
+conf t
+mpls traffic-eng tunnels
+int range f0/0-1, f1/0-1
+mpls traffic-eng tunnels
+end
+wr
+
+Router1 e 2
+
+conf t
+mpls traffic-eng tunnels
+int range f0/0-1, f1/0
+mpls traffic-eng tunnels
+end 
+wr
+
+conf t
+router ospf 1
+mpls traffic-eng area 0
+mpls traffic-eng router-id Loopback 0
+end
+wr
+
+ex 6)
+
+RouterA e B
+
+conf t
+int range f0/0-1, f1/0-1
+ip rsvp bandwidth 512 512
+end
+wr
+
+Router1 e 2
+
+conf t
+int range f0/0-1, f1/0
+ip rsvp bandwidth 512 512
+end 
+wr
+
+
+
+
+RouterA
+
+conf t
+interface tunnel 1
+ip unnumbered Loopback0
+tunnel destination 192.2.0.11
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 150
+
+tunnel mpls traffic-eng path-option 1 explicit name path1
+interface tunnel 2
+ip unnumbered Loopback0
+tunnel destination 192.2.0.11
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 150
+tunnel mpls traffic-eng path-option 1 explicit name path2
+ip explicit-path name path1 enable
+next-address 200.10.1.1 !Router1
+next-address 200.1.11.11 !RouterB
+ip explicit-path name path2 enable
+next-address 200.10.2.2 !Router2
+next-address 200.2.11.11 !RouterB
+end
+wr
+
+
+RouterB
+
+conf t
+interface tunnel 1
+ip unnumbered Loopback0
+tunnel destination 192.2.0.10
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 150
+
+tunnel mpls traffic-eng path-option 1 explicit name path1
+interface tunnel 2
+ip unnumbered Loopback0
+tunnel destination 192.2.0.10
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng bandwidth 150
+tunnel mpls traffic-eng path-option 1 explicit name path2
+ip explicit-path name path1 enable
+next-address 200.1.11.1 !Router1
+next-address 200.10.1.10 !RouterA
+ip explicit-path name path2 enable
+next-address 200.2.11.2 !Router2
+next-address 200.10.2.10 !RouterB
+end
+wr
+
+
+
+
+ex 8)
+
+Router A e B
+
+interface tunnel 1
+tunnel mpls traffic-eng autoroute announce
+interface tunnel 2
+tunnel mpls traffic-eng autoroute announce
+
+
+
+ex 10)
+
+ROuter A
+
+interface tunnel 3
+ip unnumbered Loopback0
+tunnel destination 192.2.0.11
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng bandwidth 150
+tunnel mpls traffic-eng path-option 1 dynamic
+
+interface tunnel 4
+ip unnumbered Loopback0
+tunnel destination 192.2.0.11
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng auto-bw !bandwidth is automatically adjusted
+tunnel mpls traffic-eng path-option 1 dynamic
+
+
+Router B
+
+
+interface tunnel 3
+ip unnumbered Loopback0
+tunnel destination 192.2.0.10
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng bandwidth 150
+tunnel mpls traffic-eng path-option 1 dynamic
+
+interface tunnel 4
+ip unnumbered Loopback0
+tunnel destination 192.2.0.10
+tunnel mode mpls traffic-eng
+tunnel mpls traffic-eng autoroute announce
+tunnel mpls traffic-eng auto-bw !bandwidth is automatically adjusted
+tunnel mpls traffic-eng path-option 1 dynamic
+
+
+ex 12)
+
+Router A e B
+
+conf t
+interface range tunnel 1-4
+shutdown
+
+All Routers:
+
+conf t
+no mpls traffic-eng tunnels
+interface range FastEthernet 0/0 !-1 Routers A e B only
+no mpls traffic-eng tunnels
+no ip rsvp bandwidth 512 512
+
+interface range FastEthernet 1/0 !-1 Routers A e B only
+no mpls traffic-eng tunnels
+no ip rsvp bandwidth 512 512
+router ospf 1
+no mpls traffic-eng router-id Loopback0
+no mpls traffic-eng area 0
+end
+wr
+
+
+ex 13 - VPN)
+
+Router A
+ip vrf VPN-1
+rd 200:1
+route-target export 200:1
+route-target import 200:1
+ip vrf VPN-2
+rd 200:2
+route-target export 200:2
+route-target import 200:2
+
+
+Associate each one of the network interfaces to the respective VRF instance (VPN):
+
+interface FastEthernet0/0
+ip vrf forwarding VPN-1
+
+ip address 192.3.1.10 255.255.255.0 !Addresses must be re-configured
+interface FastEthernet0/1
+ip vrf forwarding VPN-2
+ip address 192.3.2.10 255.255.255.0 !Addresses must be re-configured
+
+Router B
+
+ip vrf VPN-1
+rd 200:1
+route-target export 200:1
+route-target import 200:1
+ip vrf VPN-2
+rd 200:2
+route-target export 200:2
+route-target import 200:2
+
+
+!Associate each one of the network interfaces to the respective VRF instance (VPN):
+
+interface FastEthernet0/0
+ip vrf forwarding VPN-1
+
+ip address 192.1.1.11 255.255.255.0 !Addresses must be re-configured
+interface FastEthernet0/1
+ip vrf forwarding VPN-2
+ip address 192.1.1.129 255.255.255.128 !Addresses must be re-configured
+
+
+RouterA e B
+
+conf t
+mpls ip
+int range f1/0-1
+ip ospf 1 area 0
+mpls ip
+end
+wr
+
+Router1 e 2
+
+conf t
+mpls ip
+int range f0/0-1, f1/0
+ip ospf 1 area 0
+mpls ip
+end
+wr
+
+RouterA
+
+router bgp 200
+bgp router-id 10.10.10.10 !router-id must be defined
+neighbor 192.2.0.11 remote-as 200
+neighbor 192.2.0.11 update-source Loopback0
+!
+address-family vpnv4
+neighbor 192.2.0.11 activate
+neighbor 192.2.0.11 send-community both
+!
+address-family ipv4 vrf VPN-1
+redistribute connected
+address-family ipv4 vrf VPN-2
+redistribute connected
+
+RouterB
+
+router bgp 200
+bgp router-id 11.11.11.11 !router-id must be defined
+neighbor 192.2.0.10 remote-as 200
+neighbor 192.2.0.10 update-source Loopback0
+!
+address-family vpnv4
+neighbor 192.2.0.10 activate
+neighbor 192.2.0.10 send-community both
+!
+address-family ipv4 vrf VPN-1
+redistribute connected
+address-family ipv4 vrf VPN-2
+redistribute connected
+
+
+
+
+
+-------------------------------------------
+
+
+

@@ -1,0 +1,45 @@
+Oct 18 15:16:10.420 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 18 15:16:10.420 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 37223.
+Oct 18 15:16:10.431 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 18 15:16:10.431 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips 
+Oct 18 15:16:10.431 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips
+Oct 18 15:16:10.431 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/81ba55b9-b8fc-4239-9a38-6c06446c800c 
+Oct 18 15:16:10.431 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/81ba55b9-b8fc-4239-9a38-6c06446c800c
+Oct 18 15:16:10.432 HYPERVISOR: exec_cmd: vm create RouterB 5 c7200 
+Oct 18 15:16:10.432 VM: VM RouterB created.
+Oct 18 15:16:10.432 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterB 5019 
+Oct 18 15:16:10.432 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterB 
+Oct 18 15:16:10.433 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:10.433 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 0 0 C7200-IO-FE 
+Oct 18 15:16:10.433 HYPERVISOR: exec_cmd: vm set_disk0 RouterB 0 
+Oct 18 15:16:10.434 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:10.434 HYPERVISOR: exec_cmd: vm set_idle_pc RouterB 0x62cbf334 
+Oct 18 15:16:10.434 HYPERVISOR: exec_cmd: vm set_ios RouterB /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 18 15:16:10.435 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterB ca05.54c8.0000 
+Oct 18 15:16:10.435 HYPERVISOR: exec_cmd: vm set_nvram RouterB 512 
+Oct 18 15:16:10.435 HYPERVISOR: exec_cmd: vm set_ram RouterB 512 
+Oct 18 15:16:10.436 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:10.436 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterB 0 0 
+Oct 18 15:16:10.436 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:10.436 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 0 0 C7200-IO-2FE 
+Oct 18 15:16:10.437 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:10.437 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 1 0 PA-2FE-TX 
+Oct 18 15:16:11.200 HYPERVISOR: exec_cmd: nio create_udp udp-ebaa762f-b92a-4f64-af47-6df20ae80943 10018 127.0.0.1 10019 
+Oct 18 15:16:11.411 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 1 1 udp-ebaa762f-b92a-4f64-af47-6df20ae80943 
+Oct 18 15:16:11.411 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:11.477 HYPERVISOR: exec_cmd: nio create_udp udp-fb6604d2-069c-45e6-b093-cac79bf91dd5 10022 127.0.0.1 10023 
+Oct 18 15:16:11.478 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 0 1 udp-fb6604d2-069c-45e6-b093-cac79bf91dd5 
+Oct 18 15:16:11.478 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:11.546 HYPERVISOR: exec_cmd: nio create_udp udp-52b489ab-172e-40bc-a55d-00eb1d9193ca 10026 127.0.0.1 10027 
+Oct 18 15:16:11.547 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 0 0 udp-52b489ab-172e-40bc-a55d-00eb1d9193ca 
+Oct 18 15:16:11.547 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:16:11.612 HYPERVISOR: exec_cmd: nio create_udp udp-88280d9d-236d-488b-947f-1475c1e103d5 10030 127.0.0.1 10031 
+Oct 18 15:16:11.613 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 1 0 udp-88280d9d-236d-488b-947f-1475c1e103d5 
+Oct 18 15:16:11.613 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:17:07.838 HYPERVISOR: exec_cmd: vm set_ghost_status RouterB 2 
+Oct 18 15:17:07.839 HYPERVISOR: exec_cmd: vm set_ghost_file RouterB /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 18 15:17:07.839 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 18 15:17:07.840 HYPERVISOR: exec_cmd: vm set_config RouterB configs/i5_startup-config.cfg configs/i5_private-config.cfg 
+Oct 18 15:17:07.841 HYPERVISOR: exec_cmd: vm start RouterB 
+Oct 18 15:17:38.071 HYPERVISOR: exec_cmd: vm extract_config RouterB 
+Oct 18 16:28:38.330 HYPERVISOR: exec_cmd: vm extract_config RouterB 

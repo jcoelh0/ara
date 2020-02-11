@@ -1,0 +1,12 @@
+Sep 25 14:28:53.109 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Sep 25 14:28:53.109 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 55599.
+Sep 25 14:28:53.118 HYPERVISOR: exec_cmd: hypervisor version 
+Sep 25 14:28:53.118 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Aula01/1st/project-files/dynamips 
+Sep 25 14:28:53.118 GENERAL: working_dir=/home/joao/Desktop/ARA/Aula01/1st/project-files/dynamips
+Sep 25 14:28:53.118 HYPERVISOR: exec_cmd: ethsw create Ethernetswitch-2 
+Sep 25 14:28:53.279 HYPERVISOR: exec_cmd: nio create_udp udp-90df77aa-5bfe-45a7-87fb-e432573a7df2 10006 127.0.0.1 10007 
+Sep 25 14:28:53.280 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-2 udp-90df77aa-5bfe-45a7-87fb-e432573a7df2 
+Sep 25 14:28:53.288 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-2 udp-90df77aa-5bfe-45a7-87fb-e432573a7df2 1 
+Sep 25 14:28:54.136 HYPERVISOR: exec_cmd: nio create_udp udp-c22d97fa-f148-4731-a86e-1181b0ad9bc0 10025 127.0.0.1 10024 
+Sep 25 14:28:54.136 HYPERVISOR: exec_cmd: ethsw add_nio Ethernetswitch-2 udp-c22d97fa-f148-4731-a86e-1181b0ad9bc0 
+Sep 25 14:28:54.151 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernetswitch-2 udp-c22d97fa-f148-4731-a86e-1181b0ad9bc0 1 

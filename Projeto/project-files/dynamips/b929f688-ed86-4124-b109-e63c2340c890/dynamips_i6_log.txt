@@ -1,0 +1,65 @@
+Jan 03 12:32:28.787 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 03 12:32:28.789 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63540.
+Jan 03 12:32:29.252 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 03 12:32:29.308 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips 
+Jan 03 12:32:29.309 GENERAL: working_dir=C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips
+Jan 03 12:32:29.419 HYPERVISOR: exec_cmd: vm create Aveiro 5 c7200 
+Jan 03 12:32:29.422 VM: VM Aveiro created.
+Jan 03 12:32:29.466 HYPERVISOR: exec_cmd: vm set_con_tcp_port Aveiro 5004 
+Jan 03 12:32:29.480 HYPERVISOR: exec_cmd: c7200 get_mac_addr Aveiro 
+Jan 03 12:32:29.515 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.538 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-FE 
+Jan 03 12:32:29.564 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.579 HYPERVISOR: exec_cmd: vm set_idle_pc Aveiro 0x61d99154 
+Jan 03 12:32:29.598 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.625 HYPERVISOR: exec_cmd: vm slot_remove_binding Aveiro 0 0 
+Jan 03 12:32:29.653 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.679 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 0 0 C7200-IO-2FE 
+Jan 03 12:32:29.706 HYPERVISOR: exec_cmd: vm set_ram Aveiro 512 
+Jan 03 12:32:29.732 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.759 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 1 0 PA-2FE-TX 
+Jan 03 12:32:29.787 HYPERVISOR: exec_cmd: vm set_nvram Aveiro 512 
+Jan 03 12:32:29.813 HYPERVISOR: exec_cmd: vm set_disk0 Aveiro 0 
+Jan 03 12:32:29.840 HYPERVISOR: exec_cmd: c7200 set_mac_addr Aveiro ca05.24a8.0000 
+Jan 03 12:32:29.866 HYPERVISOR: exec_cmd: vm set_exec_area Aveiro 64 
+Jan 03 12:32:29.893 HYPERVISOR: exec_cmd: vm set_ios Aveiro C:/Users/Asus/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 03 12:32:29.919 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:29.945 HYPERVISOR: exec_cmd: vm slot_add_binding Aveiro 2 0 PA-2FE-TX 
+Jan 03 12:32:29.973 HYPERVISOR: exec_cmd: vm set_config Aveiro configs/i5_startup-config.cfg 
+Jan 03 12:32:33.056 HYPERVISOR: exec_cmd: nio create_udp udp-887004d6-1256-4bfc-a481-0d79457a0c85 10013 127.0.0.1 10012 
+Jan 03 12:32:33.098 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 0 udp-887004d6-1256-4bfc-a481-0d79457a0c85 
+Jan 03 12:32:33.143 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:33.348 HYPERVISOR: exec_cmd: nio create_udp udp-d6eb6f9a-e7ad-476d-8814-6c4ab643f001 10020 127.0.0.1 10021 
+Jan 03 12:32:33.391 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 0 1 udp-d6eb6f9a-e7ad-476d-8814-6c4ab643f001 
+Jan 03 12:32:33.426 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:32:33.815 HYPERVISOR: exec_cmd: nio create_udp udp-ecb784e2-00f1-4edc-96cd-7aa838e97e76 10032 127.0.0.1 10033 
+Jan 03 12:32:33.851 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Aveiro 1 0 udp-ecb784e2-00f1-4edc-96cd-7aa838e97e76 
+Jan 03 12:32:33.878 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:42:16.483 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Jan 03 12:42:16.487 VM: VM Ghost created.
+Jan 03 12:42:16.504 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/Asus/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Jan 03 12:42:16.514 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Jan 03 12:42:16.520 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 03 12:42:16.528 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Jan 03 12:42:16.534 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 03 12:42:16.540 HYPERVISOR: exec_cmd: vm start Ghost 
+Jan 03 12:42:16.943 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Jan 03 12:42:16.951 HYPERVISOR: exec_cmd: vm stop Ghost 
+Jan 03 12:42:17.216 VM: VM Ghost shutdown.
+Jan 03 12:42:17.223 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Jan 03 12:42:17.223 VM: VM Ghost destroyed.
+Jan 03 12:42:17.300 HYPERVISOR: exec_cmd: vm set_ghost_status Aveiro 2 
+Jan 03 12:42:17.307 HYPERVISOR: exec_cmd: vm set_ghost_file Aveiro c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Jan 03 12:42:17.315 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:42:17.324 HYPERVISOR: exec_cmd: vm start Aveiro 
+Jan 03 12:59:21.465 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 12:59:21.468 HYPERVISOR: exec_cmd: vm stop Aveiro 
+Jan 03 12:59:21.965 VM: VM Aveiro shutdown.
+Jan 03 12:59:22.142 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Jan 03 13:15:14.866 HYPERVISOR: exec_cmd: vm get_status Aveiro 
+Jan 03 13:15:14.958 HYPERVISOR: exec_cmd: vm extract_config Aveiro 
+Jan 03 13:15:15.247 HYPERVISOR: exec_cmd: vm delete Aveiro 
+Jan 03 13:15:15.247 VM: VM Aveiro destroyed.
+Jan 03 13:15:15.377 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 03 13:15:15.625 HYPERVISOR: Stopped.
+Jan 03 13:15:15.626 GENERAL: reset done.

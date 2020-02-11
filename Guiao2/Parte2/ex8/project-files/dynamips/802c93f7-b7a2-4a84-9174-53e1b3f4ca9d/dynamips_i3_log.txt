@@ -1,0 +1,50 @@
+Oct 24 15:13:40.882 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 24 15:13:40.882 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 50541.
+Oct 24 15:13:40.892 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 24 15:13:40.892 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips 
+Oct 24 15:13:40.893 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips
+Oct 24 15:13:40.893 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/802c93f7-b7a2-4a84-9174-53e1b3f4ca9d 
+Oct 24 15:13:40.893 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/802c93f7-b7a2-4a84-9174-53e1b3f4ca9d
+Oct 24 15:13:40.893 HYPERVISOR: exec_cmd: vm create Router3 3 c7200 
+Oct 24 15:13:40.893 VM: VM Router3 created.
+Oct 24 15:13:40.894 HYPERVISOR: exec_cmd: vm set_con_tcp_port Router3 5002 
+Oct 24 15:13:40.894 HYPERVISOR: exec_cmd: c7200 get_mac_addr Router3 
+Oct 24 15:13:40.894 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:40.894 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 0 0 C7200-IO-FE 
+Oct 24 15:13:40.895 HYPERVISOR: exec_cmd: vm set_disk0 Router3 0 
+Oct 24 15:13:40.895 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:40.895 HYPERVISOR: exec_cmd: vm set_idle_pc Router3 0x62cbf334 
+Oct 24 15:13:40.896 HYPERVISOR: exec_cmd: vm set_ios Router3 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 24 15:13:40.896 HYPERVISOR: exec_cmd: c7200 set_mac_addr Router3 ca03.68d8.0000 
+Oct 24 15:13:40.896 HYPERVISOR: exec_cmd: vm set_nvram Router3 512 
+Oct 24 15:13:40.897 HYPERVISOR: exec_cmd: vm set_ram Router3 512 
+Oct 24 15:13:40.897 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:40.897 HYPERVISOR: exec_cmd: vm slot_remove_binding Router3 0 0 
+Oct 24 15:13:40.897 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:40.898 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 0 0 C7200-IO-2FE 
+Oct 24 15:13:40.898 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:40.898 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 1 0 PA-FE-TX 
+Oct 24 15:13:42.913 HYPERVISOR: exec_cmd: nio create_udp udp-b19a09fc-a854-42a0-a88b-ace02e73a262 10050 127.0.0.1 10051 
+Oct 24 15:13:43.127 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router3 0 0 udp-b19a09fc-a854-42a0-a88b-ace02e73a262 
+Oct 24 15:13:43.128 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:13:43.176 HYPERVISOR: exec_cmd: nio create_udp udp-054aee52-8c21-4c94-82b9-85f013799f86 10054 127.0.0.1 10055 
+Oct 24 15:13:43.178 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router3 0 1 udp-054aee52-8c21-4c94-82b9-85f013799f86 
+Oct 24 15:13:43.178 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:15:10.365 HYPERVISOR: exec_cmd: vm set_ghost_status Router3 2 
+Oct 24 15:15:10.366 HYPERVISOR: exec_cmd: vm set_ghost_file Router3 /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 24 15:15:10.367 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:15:10.368 HYPERVISOR: exec_cmd: vm set_config Router3 configs/i3_startup-config.cfg 
+Oct 24 15:15:10.368 HYPERVISOR: exec_cmd: vm start Router3 
+Oct 24 15:17:10.457 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:17:10.458 HYPERVISOR: exec_cmd: vm stop Router3 
+Oct 24 15:17:10.560 VM: VM Router3 shutdown.
+Oct 24 15:17:10.560 HYPERVISOR: exec_cmd: vm extract_config Router3 
+Oct 24 15:17:15.055 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:17:15.055 HYPERVISOR: exec_cmd: vm extract_config Router3 
+Oct 24 15:17:15.239 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 24 15:17:15.239 HYPERVISOR: exec_cmd: vm extract_config Router3 
+Oct 24 15:17:15.240 HYPERVISOR: exec_cmd: vm delete Router3 
+Oct 24 15:17:15.240 VM: VM Router3 destroyed.
+Oct 24 15:17:15.241 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 24 15:17:15.605 HYPERVISOR: Stopped.
+Oct 24 15:17:15.606 GENERAL: reset done.

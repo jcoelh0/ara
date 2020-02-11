@@ -1,0 +1,3 @@
+git add configs/ Projeto.gns3
+git commit -m " "
+git push

@@ -1,0 +1,16 @@
+1 - o que faz o atomic_agregate no bgp? (estava lá a dizer algo que ele poderia fazer, esta é de V/F)
+O atributo ATOMIC_AGGREGATE é obrigatório em todas as mensagens de UPDATE. Falso acho eu
+2 - no bgp entre vizinhos usa-se a sessão multicast 224.0.0.2? (V/F)
+3 - um bgp update tem os campos path, withdrawn e NLFI? (V)
+4 - quando um bgp quer actualizar os paths, que mensagem manda? (tinha OPEN, UPDATE, KEEPALIVE e outra) Update
+tipo de mensagem que estabelecia a relação de vizinhança (OPEN)
+5 - no ldp (acho eu) para troca de msg usa-se udp , e para iniciar sessão usa-se tcp? (algo assim) (V/F)
+6 - Os túneis MPLS são bidirecionais? (disseram-me esta, não sei como era)
+7 - quando se configura um tunel, ele é sempre prioritario para a troca de pacotes (V/F)
+8 - entre bgp do mesmo AS, só é possivel iBGP se houver um path disponivel (algo assim) (V/F)
+F-> 2 - no bgp entre vizinhos usa-se a sessão multicast 224.0.0.2? (V/F)
+V-> 3 - um bgp update tem os campos path, withdrawn e NLFI? (V/F)
+F-> 5 - no ldp (acho eu) para troca de msg usa-se udp , e para iniciar sessão usa-se tcp? (algo assim) (V/F) (from wiki: LDP and tLDP discovery runs on UDP port 646 and the session is built on TCP port 646)
+F-> 6 - Os túneis MPLS são bidirecionais? (disseram-me esta, não sei como era)
+V-> 7 - quando se configura um tunel, ele é sempre prioritario para a troca de pacotes (V/F)
+

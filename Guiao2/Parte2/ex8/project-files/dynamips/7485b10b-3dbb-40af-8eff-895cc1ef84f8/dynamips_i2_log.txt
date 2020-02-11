@@ -1,0 +1,56 @@
+Oct 24 15:13:40.849 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 24 15:13:40.850 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 49299.
+Oct 24 15:13:40.860 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 24 15:13:40.860 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips 
+Oct 24 15:13:40.860 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips
+Oct 24 15:13:40.860 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/7485b10b-3dbb-40af-8eff-895cc1ef84f8 
+Oct 24 15:13:40.860 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/7485b10b-3dbb-40af-8eff-895cc1ef84f8
+Oct 24 15:13:40.861 HYPERVISOR: exec_cmd: vm create RouterA 2 c7200 
+Oct 24 15:13:40.861 VM: VM RouterA created.
+Oct 24 15:13:40.861 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterA 5001 
+Oct 24 15:13:40.861 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterA 
+Oct 24 15:13:40.862 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:40.862 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-FE 
+Oct 24 15:13:40.862 HYPERVISOR: exec_cmd: vm set_disk0 RouterA 0 
+Oct 24 15:13:40.862 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:40.863 HYPERVISOR: exec_cmd: vm set_idle_pc RouterA 0x62cbf334 
+Oct 24 15:13:40.863 HYPERVISOR: exec_cmd: vm set_ios RouterA /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 24 15:13:40.864 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterA ca02.68c9.0000 
+Oct 24 15:13:40.864 HYPERVISOR: exec_cmd: vm set_nvram RouterA 512 
+Oct 24 15:13:40.864 HYPERVISOR: exec_cmd: vm set_ram RouterA 512 
+Oct 24 15:13:40.864 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:40.864 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterA 0 0 
+Oct 24 15:13:40.865 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:40.865 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-2FE 
+Oct 24 15:13:40.865 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:40.865 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 1 0 PA-2FE-TX 
+Oct 24 15:13:41.342 HYPERVISOR: exec_cmd: nio create_udp udp-f40b261e-8c19-4a8e-baa9-3567985331e2 10002 127.0.0.1 10003 
+Oct 24 15:13:41.557 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 0 udp-f40b261e-8c19-4a8e-baa9-3567985331e2 
+Oct 24 15:13:41.558 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:41.627 HYPERVISOR: exec_cmd: nio create_udp udp-6139c51b-b9bc-4694-a222-7f18695e7f91 10006 127.0.0.1 10007 
+Oct 24 15:13:41.629 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 1 udp-6139c51b-b9bc-4694-a222-7f18695e7f91 
+Oct 24 15:13:41.630 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:41.664 HYPERVISOR: exec_cmd: nio create_udp udp-75510d32-9b66-40b0-9457-791a2ac811b4 10010 127.0.0.1 10011 
+Oct 24 15:13:41.665 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 0 udp-75510d32-9b66-40b0-9457-791a2ac811b4 
+Oct 24 15:13:41.665 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:13:41.726 HYPERVISOR: exec_cmd: nio create_udp udp-14e31703-fea4-40e0-b683-e3b0ad2a96df 10014 127.0.0.1 10015 
+Oct 24 15:13:41.728 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 1 udp-14e31703-fea4-40e0-b683-e3b0ad2a96df 
+Oct 24 15:13:41.728 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:15:10.363 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Oct 24 15:15:10.364 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 24 15:15:10.365 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:15:10.366 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i2_startup-config.cfg 
+Oct 24 15:15:10.366 HYPERVISOR: exec_cmd: vm start RouterA 
+Oct 24 15:17:10.457 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:17:10.458 HYPERVISOR: exec_cmd: vm stop RouterA 
+Oct 24 15:17:10.581 VM: VM RouterA shutdown.
+Oct 24 15:17:10.581 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Oct 24 15:17:15.054 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:17:15.055 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Oct 24 15:17:15.165 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 24 15:17:15.165 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Oct 24 15:17:15.167 HYPERVISOR: exec_cmd: vm delete RouterA 
+Oct 24 15:17:15.167 VM: VM RouterA destroyed.
+Oct 24 15:17:15.167 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 24 15:17:15.576 HYPERVISOR: Stopped.
+Oct 24 15:17:15.576 GENERAL: reset done.

@@ -1,0 +1,96 @@
+Dec 05 16:14:01.614 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 05 16:14:01.614 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 34991.
+Dec 05 16:14:01.616 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 05 16:14:01.616 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips 
+Dec 05 16:14:01.616 GENERAL: working_dir=/home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips
+Dec 05 16:14:01.616 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/3137733f-e8ff-4b10-a512-659bfc8709bd 
+Dec 05 16:14:01.616 GENERAL: working_dir=/home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/3137733f-e8ff-4b10-a512-659bfc8709bd
+Dec 05 16:14:01.617 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Dec 05 16:14:01.617 VM: VM R1 created.
+Dec 05 16:14:01.617 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5000 
+Dec 05 16:14:01.617 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Dec 05 16:14:01.617 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 05 16:14:01.617 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Dec 05 16:14:01.618 HYPERVISOR: exec_cmd: vm set_ios R1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:01.618 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 05 16:14:01.619 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x61d99154 
+Dec 05 16:14:01.619 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Dec 05 16:14:01.619 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Dec 05 16:14:01.619 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm get_status R1 
+Dec 05 16:14:01.620 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-FE-TX 
+Dec 05 16:14:01.654 HYPERVISOR: exec_cmd: vm set_ios R1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:12.908 HYPERVISOR: exec_cmd: vm set_ios R1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:17.751 HYPERVISOR: exec_cmd: vm set_ios R1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:17.752 HYPERVISOR: exec_cmd: vm rename R1 Router1 
+Dec 05 16:14:17.781 HYPERVISOR: exec_cmd: vm set_ios Router1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:21.722 HYPERVISOR: exec_cmd: vm set_ios Router1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:21.723 HYPERVISOR: exec_cmd: vm rename Router1 RouterA 
+Dec 05 16:14:21.753 HYPERVISOR: exec_cmd: vm set_ios RouterA /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:14:57.154 HYPERVISOR: exec_cmd: vm set_ios RouterA /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:15:47.270 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:15:47.271 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterA 1 0 
+Dec 05 16:15:47.271 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:15:47.271 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 1 0 PA-2FE-TX 
+Dec 05 16:15:56.028 HYPERVISOR: exec_cmd: nio create_udp udp-cf918d2a-384c-483f-932c-0ffb41fae602 10006 127.0.0.1 10007 
+Dec 05 16:15:56.240 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 1 udp-cf918d2a-384c-483f-932c-0ffb41fae602 
+Dec 05 16:15:56.240 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:16:00.061 HYPERVISOR: exec_cmd: nio create_udp udp-fb250214-1411-441f-9b59-3c8678251b99 10010 127.0.0.1 10011 
+Dec 05 16:16:00.063 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 0 udp-fb250214-1411-441f-9b59-3c8678251b99 
+Dec 05 16:16:00.063 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:16:04.261 HYPERVISOR: exec_cmd: nio create_udp udp-2ea0d7ed-d841-4151-8a65-e957332ef4f6 10014 127.0.0.1 10015 
+Dec 05 16:16:04.262 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 1 udp-2ea0d7ed-d841-4151-8a65-e957332ef4f6 
+Dec 05 16:16:04.262 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:16:08.967 HYPERVISOR: exec_cmd: nio create_udp udp-1bd22007-5f7f-457b-bbe0-1118b74071d4 10018 127.0.0.1 10019 
+Dec 05 16:16:08.969 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 0 udp-1bd22007-5f7f-457b-bbe0-1118b74071d4 
+Dec 05 16:16:08.969 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:18:17.479 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Dec 05 16:18:17.479 VM: VM Ghost created.
+Dec 05 16:18:17.480 HYPERVISOR: exec_cmd: vm set_ios Ghost /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 05 16:18:17.480 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Dec 05 16:18:17.482 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 16:18:17.482 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Dec 05 16:18:17.483 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 05 16:18:17.486 HYPERVISOR: exec_cmd: vm set_config Ghost configs/i0_startup-config.cfg 
+Dec 05 16:18:17.488 HYPERVISOR: exec_cmd: vm start Ghost 
+Dec 05 16:18:17.946 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Dec 05 16:18:17.947 HYPERVISOR: exec_cmd: vm stop Ghost 
+Dec 05 16:18:18.109 VM: VM Ghost shutdown.
+Dec 05 16:18:18.110 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Dec 05 16:18:18.111 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Dec 05 16:18:18.111 VM: VM Ghost destroyed.
+Dec 05 16:18:18.112 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Dec 05 16:18:18.112 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 16:18:18.113 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:18:18.113 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i1_startup-config.cfg 
+Dec 05 16:18:18.113 HYPERVISOR: exec_cmd: vm start RouterA 
+Dec 05 16:18:48.321 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 05 16:20:10.159 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Dec 05 16:20:10.161 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 16:20:10.162 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:26:18.344 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 05 16:30:36.748 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:30:36.749 HYPERVISOR: exec_cmd: vm stop RouterA 
+Dec 05 16:30:36.901 VM: VM RouterA shutdown.
+Dec 05 16:30:36.902 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 05 16:31:01.579 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Dec 05 16:31:01.580 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 16:31:01.581 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 16:31:01.586 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i1_startup-config.cfg configs/i1_private-config.cfg 
+Dec 05 16:31:01.587 HYPERVISOR: exec_cmd: vm start RouterA 
+Dec 05 17:26:46.674 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Dec 05 17:26:46.679 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 17:26:46.680 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 17:27:54.329 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 17:27:54.330 HYPERVISOR: exec_cmd: vm stop RouterA 
+Dec 05 17:27:54.468 VM: VM RouterA shutdown.
+Dec 05 17:27:54.469 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Dec 05 17:27:56.015 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Dec 05 17:27:56.017 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Dec 05 17:27:56.018 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Dec 05 17:27:56.023 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i1_startup-config.cfg configs/i1_private-config.cfg 
+Dec 05 17:27:56.024 HYPERVISOR: exec_cmd: vm start RouterA 

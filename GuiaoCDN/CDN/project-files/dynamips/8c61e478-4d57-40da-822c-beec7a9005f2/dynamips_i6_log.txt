@@ -1,0 +1,33 @@
+Dec 10 17:58:55.938 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 10 17:58:55.938 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 33723.
+Dec 10 17:58:55.948 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 17:58:55.948 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips 
+Dec 10 17:58:55.948 GENERAL: working_dir=/home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips
+Dec 10 17:58:55.949 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/5e93e9a1-246d-4f20-9b40-6a0e8b6c59d8 
+Dec 10 17:58:55.949 GENERAL: working_dir=/home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips/5e93e9a1-246d-4f20-9b40-6a0e8b6c59d8
+Dec 10 17:58:55.949 HYPERVISOR: exec_cmd: vm create Server1 3 c7200 
+Dec 10 17:58:55.950 VM: VM Server1 created.
+Dec 10 17:58:55.950 HYPERVISOR: exec_cmd: vm set_con_tcp_port Server1 5010 
+Dec 10 17:58:55.951 HYPERVISOR: exec_cmd: c7200 get_mac_addr Server1 
+Dec 10 17:58:55.951 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:55.951 HYPERVISOR: exec_cmd: vm slot_add_binding Server1 0 0 C7200-IO-FE 
+Dec 10 17:58:55.952 HYPERVISOR: exec_cmd: vm set_disk0 Server1 0 
+Dec 10 17:58:55.952 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:55.952 HYPERVISOR: exec_cmd: vm set_idle_pc Server1 0x61d99154 
+Dec 10 17:58:55.953 HYPERVISOR: exec_cmd: vm set_ios Server1 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Dec 10 17:58:55.954 HYPERVISOR: exec_cmd: c7200 set_mac_addr Server1 ca03.2bf4.0000 
+Dec 10 17:58:55.954 HYPERVISOR: exec_cmd: vm set_nvram Server1 512 
+Dec 10 17:58:55.954 HYPERVISOR: exec_cmd: vm set_ram Server1 512 
+Dec 10 17:58:55.955 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:55.955 HYPERVISOR: exec_cmd: vm slot_remove_binding Server1 0 0 
+Dec 10 17:58:55.955 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:55.955 HYPERVISOR: exec_cmd: vm slot_add_binding Server1 0 0 C7200-IO-2FE 
+Dec 10 17:58:55.955 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:55.956 HYPERVISOR: exec_cmd: vm slot_add_binding Server1 1 0 PA-FE-TX 
+Dec 10 17:58:56.223 HYPERVISOR: exec_cmd: vm get_status Server1 
+Dec 10 17:58:56.225 HYPERVISOR: exec_cmd: vm extract_config Server1 
+Dec 10 17:58:56.226 HYPERVISOR: exec_cmd: vm delete Server1 
+Dec 10 17:58:56.226 VM: VM Server1 destroyed.
+Dec 10 17:58:56.227 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 17:58:56.448 HYPERVISOR: Stopped.
+Dec 10 17:58:56.448 GENERAL: reset done.

@@ -1,0 +1,45 @@
+Oct 18 15:16:10.324 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 18 15:16:10.324 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56891.
+Oct 18 15:16:10.335 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 18 15:16:10.335 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips 
+Oct 18 15:16:10.335 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips
+Oct 18 15:16:10.336 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/f9047a06-527b-4723-9e4b-3eb461b981bd 
+Oct 18 15:16:10.336 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/f9047a06-527b-4723-9e4b-3eb461b981bd
+Oct 18 15:16:10.336 HYPERVISOR: exec_cmd: vm create RouterA 2 c7200 
+Oct 18 15:16:10.336 VM: VM RouterA created.
+Oct 18 15:16:10.336 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterA 5016 
+Oct 18 15:16:10.336 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterA 
+Oct 18 15:16:10.337 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:10.337 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-FE 
+Oct 18 15:16:10.337 HYPERVISOR: exec_cmd: vm set_disk0 RouterA 0 
+Oct 18 15:16:10.338 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:10.338 HYPERVISOR: exec_cmd: vm set_idle_pc RouterA 0x62cbf334 
+Oct 18 15:16:10.339 HYPERVISOR: exec_cmd: vm set_ios RouterA /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 18 15:16:10.339 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterA ca02.549b.0000 
+Oct 18 15:16:10.339 HYPERVISOR: exec_cmd: vm set_nvram RouterA 512 
+Oct 18 15:16:10.340 HYPERVISOR: exec_cmd: vm set_ram RouterA 512 
+Oct 18 15:16:10.340 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:10.340 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterA 0 0 
+Oct 18 15:16:10.340 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:10.341 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 0 0 C7200-IO-2FE 
+Oct 18 15:16:10.341 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:10.341 HYPERVISOR: exec_cmd: vm slot_add_binding RouterA 1 0 PA-2FE-TX 
+Oct 18 15:16:10.768 HYPERVISOR: exec_cmd: nio create_udp udp-487441aa-93a1-4fab-8fd5-1952d598a58a 10002 127.0.0.1 10003 
+Oct 18 15:16:10.985 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 0 udp-487441aa-93a1-4fab-8fd5-1952d598a58a 
+Oct 18 15:16:10.986 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:11.037 HYPERVISOR: exec_cmd: nio create_udp udp-2a7be979-e212-49c0-8e5a-81a42187a65e 10006 127.0.0.1 10007 
+Oct 18 15:16:11.038 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 0 1 udp-2a7be979-e212-49c0-8e5a-81a42187a65e 
+Oct 18 15:16:11.038 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:11.073 HYPERVISOR: exec_cmd: nio create_udp udp-cbae367f-2cb0-48ca-a678-21b5161c5f62 10010 127.0.0.1 10011 
+Oct 18 15:16:11.073 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 0 udp-cbae367f-2cb0-48ca-a678-21b5161c5f62 
+Oct 18 15:16:11.074 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:16:11.133 HYPERVISOR: exec_cmd: nio create_udp udp-9b16fbb2-69f8-4042-aebe-87d3eabcd7d8 10014 127.0.0.1 10015 
+Oct 18 15:16:11.134 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterA 1 1 udp-9b16fbb2-69f8-4042-aebe-87d3eabcd7d8 
+Oct 18 15:16:11.135 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:17:07.584 HYPERVISOR: exec_cmd: vm set_ghost_status RouterA 2 
+Oct 18 15:17:07.584 HYPERVISOR: exec_cmd: vm set_ghost_file RouterA /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 18 15:17:07.584 HYPERVISOR: exec_cmd: vm get_status RouterA 
+Oct 18 15:17:07.585 HYPERVISOR: exec_cmd: vm set_config RouterA configs/i2_startup-config.cfg configs/i2_private-config.cfg 
+Oct 18 15:17:07.585 HYPERVISOR: exec_cmd: vm start RouterA 
+Oct 18 15:17:37.811 HYPERVISOR: exec_cmd: vm extract_config RouterA 
+Oct 19 14:42:21.219 HYPERVISOR: exec_cmd: vm extract_config RouterA 

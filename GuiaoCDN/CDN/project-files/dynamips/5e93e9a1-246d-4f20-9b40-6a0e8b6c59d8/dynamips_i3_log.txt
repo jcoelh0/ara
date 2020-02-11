@@ -1,0 +1,10 @@
+Dec 10 17:58:55.854 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Dec 10 17:58:55.854 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 59027.
+Dec 10 17:58:55.865 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 17:58:55.865 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips 
+Dec 10 17:58:55.865 GENERAL: working_dir=/home/joao/Desktop/ARA/GuiaoCDN/CDN/project-files/dynamips
+Dec 10 17:58:55.866 HYPERVISOR: exec_cmd: ethsw create Switch2 
+Dec 10 17:58:56.223 HYPERVISOR: exec_cmd: ethsw delete Switch2 
+Dec 10 17:58:56.225 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 17:58:56.365 HYPERVISOR: Stopped.
+Dec 10 17:58:56.365 GENERAL: reset done.

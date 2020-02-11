@@ -1,0 +1,39 @@
+Oct 18 15:16:10.357 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 18 15:16:10.357 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 56079.
+Oct 18 15:16:10.367 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 18 15:16:10.367 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips 
+Oct 18 15:16:10.367 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips
+Oct 18 15:16:10.367 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/d3370cf6-bad3-47c3-bdf1-b91098dfef57 
+Oct 18 15:16:10.367 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/d3370cf6-bad3-47c3-bdf1-b91098dfef57
+Oct 18 15:16:10.368 HYPERVISOR: exec_cmd: vm create Router3 3 c7200 
+Oct 18 15:16:10.368 VM: VM Router3 created.
+Oct 18 15:16:10.368 HYPERVISOR: exec_cmd: vm set_con_tcp_port Router3 5017 
+Oct 18 15:16:10.368 HYPERVISOR: exec_cmd: c7200 get_mac_addr Router3 
+Oct 18 15:16:10.368 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:10.369 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 0 0 C7200-IO-FE 
+Oct 18 15:16:10.369 HYPERVISOR: exec_cmd: vm set_disk0 Router3 0 
+Oct 18 15:16:10.369 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:10.370 HYPERVISOR: exec_cmd: vm set_idle_pc Router3 0x62cbf334 
+Oct 18 15:16:10.370 HYPERVISOR: exec_cmd: vm set_ios Router3 /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 18 15:16:10.371 HYPERVISOR: exec_cmd: c7200 set_mac_addr Router3 ca03.54aa.0000 
+Oct 18 15:16:10.371 HYPERVISOR: exec_cmd: vm set_nvram Router3 512 
+Oct 18 15:16:10.371 HYPERVISOR: exec_cmd: vm set_ram Router3 512 
+Oct 18 15:16:10.371 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:10.372 HYPERVISOR: exec_cmd: vm slot_remove_binding Router3 0 0 
+Oct 18 15:16:10.372 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:10.372 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 0 0 C7200-IO-2FE 
+Oct 18 15:16:10.372 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:10.373 HYPERVISOR: exec_cmd: vm slot_add_binding Router3 1 0 PA-FE-TX 
+Oct 18 15:16:12.114 HYPERVISOR: exec_cmd: nio create_udp udp-e0cadda8-ee00-4fd4-871b-ba3f9ebe4b25 10046 127.0.0.1 10047 
+Oct 18 15:16:12.328 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router3 0 0 udp-e0cadda8-ee00-4fd4-871b-ba3f9ebe4b25 
+Oct 18 15:16:12.328 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:16:12.373 HYPERVISOR: exec_cmd: nio create_udp udp-2dfdfa8e-209b-42d0-96fd-9eb7ef6bc9ad 10050 127.0.0.1 10051 
+Oct 18 15:16:12.374 HYPERVISOR: exec_cmd: vm slot_add_nio_binding Router3 0 1 udp-2dfdfa8e-209b-42d0-96fd-9eb7ef6bc9ad 
+Oct 18 15:16:12.374 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:17:07.584 HYPERVISOR: exec_cmd: vm set_ghost_status Router3 2 
+Oct 18 15:17:07.585 HYPERVISOR: exec_cmd: vm set_ghost_file Router3 /home/joao/Desktop/ARA/Guiao2/BGPneighboring/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 18 15:17:07.585 HYPERVISOR: exec_cmd: vm get_status Router3 
+Oct 18 15:17:07.586 HYPERVISOR: exec_cmd: vm set_config Router3 configs/i3_startup-config.cfg configs/i3_private-config.cfg 
+Oct 18 15:17:07.586 HYPERVISOR: exec_cmd: vm start Router3 
+Oct 18 15:17:37.834 HYPERVISOR: exec_cmd: vm extract_config Router3 
+Oct 18 15:24:37.863 HYPERVISOR: exec_cmd: vm extract_config Router3 

@@ -1,0 +1,58 @@
+ex 1)
+
+Router A)
+conf t
+int f0/0
+ip address 192.0.1.10 255.255.255.0
+no shut
+int f1/0
+ip address 192.1.1.10 255.255.255.0
+no shut
+int f1/1
+ip address 192.2.2.10 255.255.255.0
+no shut
+end
+wr
+
+PC1)
+conf t
+no ip routing !disables IPv4 routing
+ip default-gateway 192.0.1.10 !defines default gateway
+ip name-server 192.1.1.100 !defines DNS server
+ip domain lookup !domain names should be resolved using DNS
+int f0/0
+ip address 192.0.1.100 255.255.255.0
+no shutdown
+end
+wr
+
+Server1)
+conf t
+no ip routing !disables IPv4 routing
+ip default-gateway 192.1.1.10 !defines default gateway
+ip name-server 192.1.1.100 !defines DNS server
+ip domain lookup !domain names should be resolved using DNS
+int f0/0
+ip address 192.1.1.1 255.255.255.0
+no shutdown
+end
+wr
+
+Server2)
+conf t
+no ip routing !disables IPv4 routing
+ip default-gateway 192.2.2.10 !defines default gateway
+ip name-server 192.1.1.100 !defines DNS server
+ip domain lookup !domain names should be resolved using DNS
+int f0/0
+ip address 192.2.2.2 255.255.255.0
+no shutdown
+end
+wr
+
+
+
+
+
+
+

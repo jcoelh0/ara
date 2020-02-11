@@ -1,0 +1,22 @@
+Jan 03 12:32:28.223 HYPERVISOR: Release 0.2.14-x86/Windows (tag 2014092320)
+Jan 03 12:32:28.225 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 63525.
+Jan 03 12:32:28.363 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 03 12:32:28.381 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips 
+Jan 03 12:32:28.560 GENERAL: working_dir=C:\Users\Asus\Documents\Universidade\4 Ano\ARA\Projeto\Projeto\project-files\dynamips
+Jan 03 12:32:28.563 HYPERVISOR: exec_cmd: ethsw create Ethernet Core 
+Jan 03 12:32:32.392 HYPERVISOR: exec_cmd: nio create_udp udp-bbcbe9bb-70ca-4399-aa2d-ab1b4f79c291 10001 127.0.0.1 10000 
+Jan 03 12:32:32.419 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-bbcbe9bb-70ca-4399-aa2d-ab1b4f79c291 
+Jan 03 12:32:32.459 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-bbcbe9bb-70ca-4399-aa2d-ab1b4f79c291 1 
+Jan 03 12:32:32.518 HYPERVISOR: exec_cmd: nio create_udp udp-c0c7f0dd-61cb-43dd-970b-7d4c67ed326a 10003 127.0.0.1 10002 
+Jan 03 12:32:32.531 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-c0c7f0dd-61cb-43dd-970b-7d4c67ed326a 
+Jan 03 12:32:32.561 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-c0c7f0dd-61cb-43dd-970b-7d4c67ed326a 1 
+Jan 03 12:32:32.995 HYPERVISOR: exec_cmd: nio create_udp udp-a08dc008-3c60-4b26-80fa-a808bbf42afe 10012 127.0.0.1 10013 
+Jan 03 12:32:33.018 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-a08dc008-3c60-4b26-80fa-a808bbf42afe 
+Jan 03 12:32:33.059 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-a08dc008-3c60-4b26-80fa-a808bbf42afe 1 
+Jan 03 12:32:34.497 HYPERVISOR: exec_cmd: nio create_udp udp-d8eafd25-24ca-4528-8e4e-690c24321c46 10050 127.0.0.1 10051 
+Jan 03 12:32:34.517 HYPERVISOR: exec_cmd: ethsw add_nio Ethernet Core udp-d8eafd25-24ca-4528-8e4e-690c24321c46 
+Jan 03 12:32:34.565 HYPERVISOR: exec_cmd: ethsw set_access_port Ethernet Core udp-d8eafd25-24ca-4528-8e4e-690c24321c46 1 
+Jan 03 13:15:14.058 HYPERVISOR: exec_cmd: ethsw delete Ethernet Core 
+Jan 03 13:15:14.189 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 03 13:15:14.638 HYPERVISOR: Stopped.
+Jan 03 13:15:14.638 GENERAL: reset done.

@@ -1,0 +1,56 @@
+Oct 24 15:13:40.948 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Oct 24 15:13:40.948 HYPERVISOR: Started on IP = 127.0.0.1, TCP port = 57529.
+Oct 24 15:13:40.958 HYPERVISOR: exec_cmd: hypervisor version 
+Oct 24 15:13:40.958 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips 
+Oct 24 15:13:40.958 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips
+Oct 24 15:13:40.958 HYPERVISOR: exec_cmd: hypervisor working_dir /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/269dd1c8-ea8a-409f-9b48-3652fcec574f 
+Oct 24 15:13:40.958 GENERAL: working_dir=/home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/269dd1c8-ea8a-409f-9b48-3652fcec574f
+Oct 24 15:13:40.958 HYPERVISOR: exec_cmd: vm create RouterB 5 c7200 
+Oct 24 15:13:40.959 VM: VM RouterB created.
+Oct 24 15:13:40.959 HYPERVISOR: exec_cmd: vm set_con_tcp_port RouterB 5004 
+Oct 24 15:13:40.959 HYPERVISOR: exec_cmd: c7200 get_mac_addr RouterB 
+Oct 24 15:13:40.959 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:40.959 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 0 0 C7200-IO-FE 
+Oct 24 15:13:40.960 HYPERVISOR: exec_cmd: vm set_disk0 RouterB 0 
+Oct 24 15:13:40.960 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:40.960 HYPERVISOR: exec_cmd: vm set_idle_pc RouterB 0x62cbf334 
+Oct 24 15:13:40.960 HYPERVISOR: exec_cmd: vm set_ios RouterB /home/joao/GNS3/images/IOS/c7200-advipservicesk9-mz.152-4.S5.image 
+Oct 24 15:13:40.961 HYPERVISOR: exec_cmd: c7200 set_mac_addr RouterB ca05.68fd.0000 
+Oct 24 15:13:40.961 HYPERVISOR: exec_cmd: vm set_nvram RouterB 512 
+Oct 24 15:13:40.961 HYPERVISOR: exec_cmd: vm set_ram RouterB 512 
+Oct 24 15:13:40.961 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:40.961 HYPERVISOR: exec_cmd: vm slot_remove_binding RouterB 0 0 
+Oct 24 15:13:40.962 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:40.962 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 0 0 C7200-IO-2FE 
+Oct 24 15:13:40.962 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:40.962 HYPERVISOR: exec_cmd: vm slot_add_binding RouterB 1 0 PA-2FE-TX 
+Oct 24 15:13:41.785 HYPERVISOR: exec_cmd: nio create_udp udp-0e239c34-c3d2-4707-84d9-0d8255fe9df8 10018 127.0.0.1 10019 
+Oct 24 15:13:41.998 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 1 1 udp-0e239c34-c3d2-4707-84d9-0d8255fe9df8 
+Oct 24 15:13:41.998 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:42.036 HYPERVISOR: exec_cmd: nio create_udp udp-afc58412-b77d-428d-a715-4da1b4c9b89c 10022 127.0.0.1 10023 
+Oct 24 15:13:42.037 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 0 1 udp-afc58412-b77d-428d-a715-4da1b4c9b89c 
+Oct 24 15:13:42.038 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:42.091 HYPERVISOR: exec_cmd: nio create_udp udp-a16ce67c-040c-4532-8799-a4243c0a0f38 10026 127.0.0.1 10027 
+Oct 24 15:13:42.092 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 0 0 udp-a16ce67c-040c-4532-8799-a4243c0a0f38 
+Oct 24 15:13:42.093 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:13:42.145 HYPERVISOR: exec_cmd: nio create_udp udp-e688aeba-c143-4bdf-95f4-668e034e4e36 10030 127.0.0.1 10031 
+Oct 24 15:13:42.146 HYPERVISOR: exec_cmd: vm slot_add_nio_binding RouterB 1 0 udp-e688aeba-c143-4bdf-95f4-668e034e4e36 
+Oct 24 15:13:42.146 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:15:10.590 HYPERVISOR: exec_cmd: vm set_ghost_status RouterB 2 
+Oct 24 15:15:10.591 HYPERVISOR: exec_cmd: vm set_ghost_file RouterB /home/joao/Desktop/ARA/Guiao2/Parte2/untitled/project-files/dynamips/c7200-advipservicesk9-mz.152-4.S5.image-512.ghost 
+Oct 24 15:15:10.591 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:15:10.591 HYPERVISOR: exec_cmd: vm set_config RouterB configs/i5_startup-config.cfg 
+Oct 24 15:15:10.591 HYPERVISOR: exec_cmd: vm start RouterB 
+Oct 24 15:17:10.569 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:17:10.570 HYPERVISOR: exec_cmd: vm stop RouterB 
+Oct 24 15:17:10.698 VM: VM RouterB shutdown.
+Oct 24 15:17:10.699 HYPERVISOR: exec_cmd: vm extract_config RouterB 
+Oct 24 15:17:15.065 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:17:15.067 HYPERVISOR: exec_cmd: vm extract_config RouterB 
+Oct 24 15:17:15.110 HYPERVISOR: exec_cmd: vm get_status RouterB 
+Oct 24 15:17:15.110 HYPERVISOR: exec_cmd: vm extract_config RouterB 
+Oct 24 15:17:15.110 HYPERVISOR: exec_cmd: vm delete RouterB 
+Oct 24 15:17:15.111 VM: VM RouterB destroyed.
+Oct 24 15:17:15.111 HYPERVISOR: exec_cmd: hypervisor stop 
+Oct 24 15:17:15.171 HYPERVISOR: Stopped.
+Oct 24 15:17:15.171 GENERAL: reset done.
